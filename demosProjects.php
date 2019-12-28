@@ -4,7 +4,7 @@
     <h1>Demos &amp; Projects</h1>
   </div>
 </section>
-<section class="section section--small">
+<section class="section section--white section--small">
   <div class="container">
     <div class="grid grid--2">
       <div class="demo-project">

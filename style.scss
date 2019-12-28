@@ -13,7 +13,7 @@ $blue: #175297;
 $peach: #F9F5EF;
 $white: #fff;
 $black: #333;
-$sky: #E5F6FF;
+$sky: #D7F1FF;
 
 // 1. base styles
 
@@ -25,7 +25,12 @@ $sky: #E5F6FF;
 }
 
 html, body {
-  font-size: 20px;
+  @include media(">0", "<tablet") {
+    font-size: 18px;
+  }
+  @include media(">=tablet") {
+    font-size: 20px;
+  }
 }
 
 a {
@@ -40,6 +45,8 @@ a {
 
 .site-header {
   padding: 32px 16px;
+  position: relative;
+  z-index: 3;
 }
 
 .section {
@@ -145,19 +152,99 @@ a {
   }
 }
 
+.menu-button {
+  border: 0;
+  background: none;
+  @include media(">0", "<tablet") {
+    display: block;
+  }
+  @include media(">tablet") {
+    display: none;
+  }
+}
+
+#menu {
+  margin-top: 0;
+}
+
 .site-nav {
   list-style: none;
-  display: flex;
-  align-items: center;
+  @include media(">0", "<=tablet") {
+    text-align: center;
+    line-height: 3;
+    ul {
+      background: $blue;;
+      padding: 24px;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 100%;
+      display: none;
+      box-shadow: 0 10px 20px -10px rgba($black, .5);
+      a {
+        color: $white;
+        &.current {
+          color: $sky;
+        }
+        &:hover {
+          color: $sky;
+        }
+      }
+    }
+  }
   @include media(">tablet") {
+    display: flex;
+    align-items: center;
     justify-content: flex-end;
   }
   li, a {
-    display: inline-block;
+    @include media(">0", "<tablet") {
+      display: block;
+    }
+    @include media(">tablet") {
+      display: inline-block;
+    }
   }
   li:not(:last-child) {
     a {
       margin-right: 8px;
+    }
+  }
+}
+
+@include media(">0", "<tablet") {
+  .site-header .container .grid {
+    grid-gap: 0;
+  }
+}
+
+.menu-button {
+  position: absolute;
+  top: 38px;
+  right: 24px;
+  z-index: 9;
+  @include media(">0", "<tablet") {
+    display: block;
+  }
+  @include media(">tablet") {
+    display: none;
+  }
+  img {
+    width: 24px;
+    height: 24px;
+  }
+  .close {
+    display: none;
+  }
+  &.open {
+    .close {
+      display: block;
+    }
+    .open {
+      display: none;
+    }
+    + ul {
+      display: block;
     }
   }
 }
@@ -355,8 +442,13 @@ h4 {
 .button {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 18px;
   line-height: 1.2;
+  @include media(">0", "<=tablet") {
+    font-size: 16px;
+  }
+  @include media(">tablet") {
+    font-size: 18px;
+  }
 }
 
 .current {
@@ -378,8 +470,16 @@ h4 {
 
 // 4. colors
 
+body {
+  color: $black;
+}
+
 .site-name {
   color: $cranberry;
+}
+
+.site-header {
+  background: $white;
 }
 
 .site-nav a {

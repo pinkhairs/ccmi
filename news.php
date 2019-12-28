@@ -4,7 +4,7 @@
     <h1>News</h1>
   </div>
 </section>
-<section class="section section--small">
+<section class="section section--white section--small">
   <div class="container">
     <div class="news-item">
       <div class="grid grid--1-to-6">
@@ -95,10 +95,10 @@
   <div class="container text-center">
     <ul class="pagination">
       <li>1</li>
-      <li><a href="article.php">2</a></li>
-      <li><a href="article.php">3</a></li>
-      <li><a href="article.php">4</a></li>
-      <li><a href="article.php">5</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
     </ul>
   </div>
 </section>

@@ -4,7 +4,7 @@
     <h1>Contact Us</h1>
   </div>
 </section>
-<section class="section section--small">
+<section class="section section--white section--small">
   <div class="container">
     <p class="text-center">Use the form or contact methods on this page to reach out.</p>
   </div>

@@ -1,3 +1,7 @@
+<!--
+Team
+Modules
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +19,11 @@
         <a href="index.php" class="site-name">CCMI</a>
       </div>
       <nav class="site-nav">
-        <ul>
+        <button id="menuButton" class="menu-button closed">
+          <img src="images/menu.svg" alt="Menu button" class="open">
+          <img src="images/x.svg" alt="Close menu" class="close">
+        </button>
+        <ul id="menu">
           <li><a href="index.php" <?php if ($page === 'home') : ?>class="current"<?php endif; ?>>Home</a></li>
           <li><a href="about.php" <?php if ($page === 'about') : ?>class="current"<?php endif; ?>>What is CCMI?</a></li>
           <li><a href="news.php" <?php if ($page === 'news') : ?>class="current"<?php endif; ?>>News</a></li>

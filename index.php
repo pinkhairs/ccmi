@@ -14,24 +14,24 @@
     </div>
   </div>
 </section>
-<section class="section section--highlight">
+<section class="section section--small section--highlight">
   <div class="container">
     <div class="grid grid--4 text-center">
       <div>
         <p><img src="images/Icon.svg"></p>
-        <h3 >Icon</h3>
+        <h3 >Icon #1</h3>
       </div>
       <div>
         <p><img src="images/Icon.svg"></p>
-        <h3>Icon</h3>
+        <h3>Icon #2</h3>
       </div>
       <div>
         <p><img src="images/Icon.svg"></p>
-        <h3>Icon</h3>
+        <h3>Icon #3</h3>
       </div>
       <div>
         <p><img src="images/Icon.svg"></p>
-        <h3>Icon</h3>
+        <h3>Icon #4</h3>
       </div>
     </div>
   </div>
