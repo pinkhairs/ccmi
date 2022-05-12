@@ -14,5 +14,9 @@
   </div>
 </footer>
 <script src="menu.js"></script>
+<script src="tabs.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+<script src="slideshow.js"></script>
 </body>
 </html>

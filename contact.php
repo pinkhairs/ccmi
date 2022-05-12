@@ -15,6 +15,7 @@
         <label>Email <input type="email"></label>
       </div>
       <label>Your Message <textarea></textarea></label>
+      <p class="text-center"><button type="submit" class="full-width button">Send Message</button></p>
     </form>
   </div>
   <div class="container">

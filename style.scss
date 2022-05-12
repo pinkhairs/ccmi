@@ -49,6 +49,44 @@ a {
   z-index: 3;
 }
 
+.link-block {
+  padding: 24px;
+  display: block;
+  align-items: center;
+  display: flex;
+  &__thumbnail {
+    margin-right: 24px;
+  }
+  * + & {
+    margin-top: 24px;
+  }
+}
+
+.quote {
+  padding: 40px;
+  display: block;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  * + & {
+    margin-top: 24px;
+  }
+  &__text {
+    margin-bottom: 40px;
+    padding-top: 80px;
+  }
+}
+
+.tab {
+  display: none;
+  &__button {
+    display: none !important;
+    &:checked + .tab {
+      display: block;
+    }
+  }
+}
+
 .section {
   padding-left: 16px;
   padding-right: 16px;
@@ -104,6 +142,27 @@ a {
   }
 }
 
+header {
+  padding-bottom: 24px;
+}
+
+.tabs {
+  &__labels {
+    margin-bottom: 24px;
+    display: flex;
+    border-bottom: 4px $peach solid;
+  }
+  &__label {
+    margin-right: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    &.active {
+      border-bottom: 4px $cranberry solid;
+      margin-bottom: -4px;
+    }
+  }
+}
+
 .grid {
   display: grid;
   grid-gap: 24px;
@@ -145,6 +204,18 @@ a {
     }
     &--5 {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @include media(">tablet") {
+    &--reverse {
+      > *:nth-child(1) {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      > *:nth-child(2) {
+        grid-column: 1;
+        grid-row: 1;
+      }
     }
   }
   & + * {
@@ -277,6 +348,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, table, form {
   }
 }
 
+.swiper-slide {
+  margin: 16px;
+}
+
 .mt0 {
   margin-top: 0;
 }
@@ -356,10 +431,18 @@ section {
   }
 }
 
+.team-member {
+  display: flex;
+  &__info {
+    margin-left: 16px;
+  }
+}
+
 .button {
   padding: 28px 32px;
   text-align: center;
   display: inline-block;
+  border: 0px;
 }
 
 .icon-link {
@@ -380,6 +463,21 @@ body {
   line-height: 1.5;
 }
 
+.quote {
+  text-align: center;
+  cite {
+    font-style: normal;
+  }
+  &__credentials {
+    font-weight: 700;
+  }
+}
+
+.link-block {
+  text-decoration: none;
+  font-weight: 400;
+}
+
 .site-name {
   font-size: 27px;
   font-weight: bold;
@@ -388,6 +486,10 @@ body {
 
 .caps {
   text-transform: uppercase;
+}
+
+.small {
+  font-size: 0.85em;
 }
 
 h1 {
@@ -433,6 +535,13 @@ h4 {
   text-transform: uppercase;
 }
 
+h5 {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
 .stats-number {
   font-size: 96px;
   line-height: 1;
@@ -448,6 +557,15 @@ h4 {
   }
   @include media(">tablet") {
     font-size: 18px;
+  }
+}
+
+.tabs {
+  &__label {
+    text-transform: uppercase;
+    &.active {
+      font-weight: 700;
+    }
   }
 }
 
@@ -489,6 +607,25 @@ body {
   }
 }
 
+.quote {
+  background: $peach;
+  &__credit {
+    color: $cranberry;
+  }
+}
+
+
+.link-block {
+  background: $peach;
+  color: $black;
+  &__thumbnail {
+    background: #fff;
+  }
+  &:hover {
+    background-color: darken($peach, 5%)
+  }
+}
+
 a {
   color: $blue;
   text-decoration: underline;
@@ -506,11 +643,15 @@ a {
   }
 }
 
-h2, h3, h4 {
+h2, h3, h4, h5 {
   color: $cranberry;
   a {
     color: $blue;
   }
+}
+
+.callout {
+  color: $black;
 }
 
 .stats-number {
@@ -538,6 +679,14 @@ h2, h3, h4 {
 .section {
   &--highlight {
     background: $peach;
+  }
+}
+
+.tabs {
+  &__label {
+    &.active {
+      color: $cranberry;
+    }
   }
 }
 
@@ -603,4 +752,36 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
   }
+}
+
+.link-block {
+  background-image: url(images/external.svg);
+  background-position: right 40px center;
+  background-repeat: no-repeat;
+  &__thumbnail {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80px;
+    height: 80px;
+  }
+  &__icon {
+    background-size: auto 75%;
+  }
+}
+
+.quote {
+  background-image: url(images/quote.svg);
+  background-position: top 40px center;
+  background-repeat: no-repeat;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: $cranberry;
+}
+
+::selection {
+  color: #fff;
+  background: $cranberry;
 }

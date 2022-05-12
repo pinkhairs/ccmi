@@ -30,6 +30,35 @@ a {
   position: relative;
   z-index: 3; }
 
+.link-block {
+  padding: 24px;
+  display: block;
+  align-items: center;
+  display: flex; }
+  .link-block__thumbnail {
+    margin-right: 24px; }
+  * + .link-block {
+    margin-top: 24px; }
+
+.quote {
+  padding: 40px;
+  display: block;
+  align-items: center;
+  display: flex;
+  flex-direction: column; }
+  * + .quote {
+    margin-top: 24px; }
+  .quote__text {
+    margin-bottom: 40px;
+    padding-top: 80px; }
+
+.tab {
+  display: none; }
+  .tab__button {
+    display: none !important; }
+    .tab__button:checked + .tab {
+      display: block; }
+
 .section {
   padding-left: 16px;
   padding-right: 16px; }
@@ -77,6 +106,21 @@ a {
   .container--small {
     width: 640px; }
 
+header {
+  padding-bottom: 24px; }
+
+.tabs__labels {
+  margin-bottom: 24px;
+  display: flex;
+  border-bottom: 4px #F9F5EF solid; }
+.tabs__label {
+  margin-right: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px; }
+  .tabs__label.active {
+    border-bottom: 4px #8c3a58 solid;
+    margin-bottom: -4px; }
+
 .grid {
   display: grid;
   grid-gap: 24px; }
@@ -107,6 +151,13 @@ a {
   .grid--5 {
     grid-template-columns: repeat(2, 1fr); } }
 
+  @media (min-width: 769px) {
+    .grid--reverse > *:nth-child(1) {
+      grid-column: 2;
+      grid-row: 1; }
+    .grid--reverse > *:nth-child(2) {
+      grid-column: 1;
+      grid-row: 1; } }
   .grid + * {
     margin-top: 24px; }
 
@@ -207,6 +258,9 @@ a {
 * + h1, * + .day, * + h2, * + h3, * + .month, * + h4, * + h5, * + h6, * + p, * + ul, * + ol, * + table, * + form {
   margin-top: 24px; }
 
+.swiper-slide {
+  margin: 16px; }
+
 .mt0 {
   margin-top: 0; }
 
@@ -265,10 +319,16 @@ section ul, section ol {
     align-items: center;
     justify-content: flex-end; } }
 
+.team-member {
+  display: flex; }
+  .team-member__info {
+    margin-left: 16px; }
+
 .button {
   padding: 28px 32px;
   text-align: center;
-  display: inline-block; }
+  display: inline-block;
+  border: 0px; }
 
 .icon-link:not(:last-child) {
   margin-right: 8px; }
@@ -280,6 +340,17 @@ body {
   font-family: fieldwork, sans-serif;
   line-height: 1.5; }
 
+.quote {
+  text-align: center; }
+  .quote cite {
+    font-style: normal; }
+  .quote__credentials {
+    font-weight: 700; }
+
+.link-block {
+  text-decoration: none;
+  font-weight: 400; }
+
 .site-name {
   font-size: 27px;
   font-weight: bold;
@@ -287,6 +358,9 @@ body {
 
 .caps, .month {
   text-transform: uppercase; }
+
+.small {
+  font-size: 0.85em; }
 
 h1, .day {
   font-weight: 700; }
@@ -330,6 +404,12 @@ h4 {
   line-height: 28px;
   text-transform: uppercase; }
 
+h5 {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 26px;
+  text-transform: uppercase; }
+
 .stats-number {
   font-size: 96px;
   line-height: 1;
@@ -346,6 +426,11 @@ h4 {
   @media (min-width: 769px) {
     .button {
       font-size: 18px; } }
+
+.tabs__label {
+  text-transform: uppercase; }
+  .tabs__label.active {
+    font-weight: 700; }
 
 .current {
   font-weight: 700; }
@@ -373,6 +458,19 @@ body {
   .site-nav a:hover {
     color: #175297; }
 
+.quote {
+  background: #F9F5EF; }
+  .quote__credit {
+    color: #8c3a58; }
+
+.link-block {
+  background: #F9F5EF;
+  color: #333; }
+  .link-block__thumbnail {
+    background: #fff; }
+  .link-block:hover {
+    background-color: #f2e9dc; }
+
 a {
   color: #175297;
   text-decoration: underline;
@@ -387,10 +485,13 @@ a {
     color: #175297;
     font-weight: 700; }
 
-h2, h3, .month, h4 {
+h2, h3, .month, h4, h5 {
   color: #8c3a58; }
-  h2 a, h3 a, .month a, h4 a {
+  h2 a, h3 a, .month a, h4 a, h5 a {
     color: #175297; }
+
+.callout {
+  color: #333; }
 
 .stats-number {
   color: #333; }
@@ -411,6 +512,9 @@ h2, h3, .month, h4 {
 
 .section--highlight {
   background: #F9F5EF; }
+
+.tabs__label.active {
+  color: #8c3a58; }
 
 .card {
   background: #fff; }
@@ -456,5 +560,31 @@ a:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
+
+.link-block {
+  background-image: url(images/external.svg);
+  background-position: right 40px center;
+  background-repeat: no-repeat; }
+  .link-block__thumbnail {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80px;
+    height: 80px; }
+  .link-block__icon {
+    background-size: auto 75%; }
+
+.quote {
+  background-image: url(images/quote.svg);
+  background-position: top 40px center;
+  background-repeat: no-repeat; }
+
+::-moz-selection {
+  color: #fff;
+  background: #8c3a58; }
+
+::selection {
+  color: #fff;
+  background: #8c3a58; }
 
 /*# sourceMappingURL=style.css.map */

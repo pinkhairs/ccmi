@@ -16,26 +16,6 @@
 </section>
 <section class="section section--small section--highlight">
   <div class="container">
-    <div class="grid grid--4 text-center">
-      <div>
-        <p><img src="images/Icon.svg"></p>
-        <h3 >Icon #1</h3>
-      </div>
-      <div>
-        <p><img src="images/Icon.svg"></p>
-        <h3>Icon #2</h3>
-      </div>
-      <div>
-        <p><img src="images/Icon.svg"></p>
-        <h3>Icon #3</h3>
-      </div>
-      <div>
-        <p><img src="images/Icon.svg"></p>
-        <h3>Icon #4</h3>
-      </div>
-    </div>
-  </div>
-  <div class="container">
     <div class="mission">
       <div class="card">
         <h2>Our Mission</h2>
@@ -148,33 +128,6 @@
       </div>
       <div>
         <h3><a href="article.php">Why Hollywood's female stars get all the worst lines</a></h3>
-        <p>Aug 14, 2019</p>
-      </div>
-    </div>
-    <div class="grid grid--1-to-2">
-      <div>
-        <img class="full-width" src="images/article7.jpg" alt="">
-      </div>
-      <div>
-        <h3><a href="article.php">Film dialogue often reinforces stereotypes about race and gender, a machine learning study confirms</a></h3>
-        <p>Aug 14, 2019</p>
-      </div>
-    </div>
-    <div class="grid grid--1-to-2">
-      <div>
-        <img class="full-width" src="images/article8.jpg" alt="">
-      </div>
-      <div>
-        <h3><a href="article.php">Despite female-led films making more money, study reveals Hollywood tends to give women pointless roles</a></h3>
-        <p>Aug 14, 2019</p>
-      </div>
-    </div>
-    <div class="grid grid--1-to-2">
-      <div>
-        <img class="full-width" src="images/article1.jpg" alt="">
-      </div>
-      <div>
-        <h3><a href="article.php">Men Speak More Than Twice as Often As Women Do in Films</a></h3>
         <p>Aug 14, 2019</p>
       </div>
     </div>
